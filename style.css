@@ -395,22 +395,16 @@ body{
     }
 }
 
-/* =========================================
-   MOBILNÁ VERZIA (Podľa PC dizajnu)
-   ========================================= */
+
 
 @media (max-width: 900px) {
-
-    /* 1. ZÁKLADNÉ ROZLOŽENIE */
     html, body {
         width: 100%;
-        overflow-x: hidden; /* Zabraňuje horizontálnemu scrolovaniu */
-        padding: 10px;      /* Menšie odsadenie od krajov */
+        overflow-x: hidden; 
+        padding: 10px;      
     }
 
-    /* 2. HLAVIČKA A LOGO */
     .topDiv {
-        /* Zachováme flex, aby bolo logo vľavo a odkaz vpravo */
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -433,38 +427,35 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 0; /* Reset PC okraja */
+        margin-left: 0; 
     }
 
     .logo p {
-        font-size: 16px; /* Mierne menšie písmo */
+        font-size: 16px; 
         margin-left: 10px;
         white-space: nowrap;
     }
 
-    /* 3. HERO SEKCIA (Selfie + Text) */
     .introDiv {
         display: flex;
-        flex-direction: column; /* DÔLEŽITÉ: Fotka hore, text dole */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         margin-top: 10px;
     }
 
     .introDiv img {
-        width: 60% !important; /* Prepíšeme HTML atribút width="430" */
-        max-width: 250px;      /* Aby fotka nebola obrovská */
+        width: 60% !important; 
+        max-width: 250px;     
         height: auto;
-        margin-bottom: 20px;   /* Medzera pod fotkou */
+        margin-bottom: 20px;   
         border-radius: 10px;
         
-        /* Zachovanie animácie */
         opacity: 0;
         animation: slideInLeft 0.5s cubic-bezier(0.20, 1, 0.5, 1) forwards;
     }
 
     .intro {
-        /* Reset PC pozicovania */
         margin: 0; 
         font-size: 18px;
         width: 100%;
@@ -475,21 +466,18 @@ body{
     }
 
     .intro h1 {
-        font-size: 26px; /* Meno musí byť čitateľné */
+        font-size: 26px; 
         line-height: 1.3;
         margin-top: 10px;
     }
 
-    /* 4. NAVIGÁCIA (Tlačidlá) */
     nav {
-        /* Zmena z Grid na Flex stĺpec - tlačidlá pod sebou */
         display: flex;
         flex-direction: column;
         width: 100%;
         
-        /* Reset PC pozície (margin-left: 43%) */
         margin: 20px 0 0 0; 
-        gap: 15px; /* Medzery medzi tlačidlami */
+        gap: 15px;
     }
 
     .buttonPos {
@@ -498,30 +486,28 @@ body{
 
     .button {
         width: 100%;
-        padding: 15px 0; /* Pevný padding namiesto % */
+        padding: 15px 0;
         font-size: 18px;
         border-radius: 8px;
         
-        /* Zachovanie farieb z PC verzie */
+       
         background-color: transparent;
         border: 1px solid rgba(235, 64, 52, 0.70);
         color: rgba(235, 64, 52, 0.70);
     }
 
-    /* Aktívny stav tlačidla pre mobil */
+   
     .button.active {
-        background-color: rgba(235, 64, 52, 0.70); /* Červené pozadie */
-        color: white; /* Biely text */
+        background-color: rgba(235, 64, 52, 0.70); 
+        color: white; 
         border-color: rgba(235, 64, 52, 1);
-        box-shadow: 0 0 15px rgba(235, 64, 52, 0.4); /* Jemná žiara, aby to vyzeralo sci-fi */
+        box-shadow: 0 0 15px rgba(235, 64, 52, 0.4); 
     }
 
-    /* 5. OBSAH SEKCIE (Tab Content) */
     .tabContent {
         margin-left: 0;
         padding: 20px 0;
-        border-left: none; /* Odstránime ľavú čiaru, zavadzia */
-        /* Pridáme hornú čiaru pre oddelenie od menu */
+        border-left: none; 
         border-top: 1px solid rgba(80, 81, 87, 0.2); 
         margin-top: 20px;
 
@@ -542,19 +528,17 @@ body{
         line-height: 1.6;
     }
 
-    /* 6. ČASOVÁ OS (Timeline) */
     .timelineItem {
         margin-left: 0;
         padding: 15px;
-        /* Tenšia červená čiara vľavo */
+
         border-left: 2px solid rgba(235, 64, 52, 0.5); 
         margin-bottom: 20px;
-        /* Jemné pozadie pre lepšiu čitateľnosť na mobile */
+
         background: linear-gradient(90deg, rgba(235, 64, 52, 0.05) 0%, rgba(0,0,0,0) 100%);
     }
 
     .timelineItem h4 {
-        /* Dátum presunieme pod názov */
         display: flex;
         flex-direction: column;
         font-size: 18px;
@@ -564,13 +548,11 @@ body{
         margin-left: 0;
         margin-top: 5px;
         font-size: 14px;
-        color: rgba(235, 64, 52, 0.70); /* Zvýraznenie dátumu */
+        color: rgba(235, 64, 52, 0.70); 
     }
 
-    /* 7. GRIDY (Certifikáty a Kontakty) */
     .certificateGrid, 
     .contactGrid {
-        /* Zmena z 3 stĺpcov na 1 stĺpec */
         grid-template-columns: 1fr;
         margin-left: 0;
         margin-right: 0;
@@ -585,13 +567,11 @@ body{
         border-radius: 8px;
     }
 
-    /* 8. KONTAKTNÁ STRÁNKA */
     .contact {
         margin-left: 0;
     }
     
     .socialsGrid {
-        /* Sociálne siete môžu ostať v 2 stĺpcoch, je to prehľadné */
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
         gap: 15px;
@@ -604,8 +584,6 @@ body{
         border-radius: 10px;
     }
 
-    /* 9. ÚPRAVA ANIMÁCIÍ PRE MOBIL */
-    /* Zmenšujeme posun z 50% na 20px, aby stránka "nelietala" do strán */
     @keyframes slideInRight {
         from { opacity: 0; transform: translateX(20px); }
         to { opacity: 1; transform: translateX(0); }
