@@ -66,7 +66,7 @@ body{
 }
 
 
-@media (min-width: 764px){
+@media (min-width: 901px){
     .topDiv{
         display: flex;
         flex-direction: row;
@@ -172,12 +172,6 @@ body{
         cursor: pointer;
         background-color: rgba(235, 64, 52, 0.15);
         color: rgba(235, 64, 52, 1);
-    }
-
-    .button:active{
-        cursor: pointer;
-        background-color: rgba(235, 64, 52, 0.70);
-        color: rgba(80, 81, 87, 0.50);
     }
 
     .edu{
@@ -391,17 +385,209 @@ body{
     }
 }
 
-@media (max-width: 763px){
-    .intro{
-        margin-left: 0;
-        text-align: center;
-        max-width: 100%;
+/* =========================================
+   MOBILNÁ VERZIA (Podľa PC dizajnu)
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    /* 1. ZÁKLADNÉ ROZLOŽENIE */
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Zabraňuje horizontálnemu scrolovaniu */
+        padding: 10px;      /* Menšie odsadenie od krajov */
     }
 
-    .button{
-        margin-left: 0;
+    /* 2. HLAVIČKA A LOGO */
+    .topDiv {
+        /* Zachováme flex, aby bolo logo vľavo a odkaz vpravo */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .hyperlink{
+        margin-right: 3%;
+        color: rgba(235, 64, 52, 0.70);
+        text-decoration: none;
+    }
+
+    .hyperlink:active{
+        color: rgba(80, 81, 87, 0.50);
+    }
+
+    .logo {
+        margin-left: 0; /* Reset PC okraja */
+    }
+
+    .logo p {
+        font-size: 16px; /* Mierne menšie písmo */
+        margin-left: 10px;
+    }
+
+    /* 3. HERO SEKCIA (Selfie + Text) */
+    .introDiv {
+        display: flex;
+        flex-direction: column; /* DÔLEŽITÉ: Fotka hore, text dole */
+        align-items: center;
         text-align: center;
-        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .introDiv img {
+        width: 60% !important; /* Prepíšeme HTML atribút width="430" */
+        max-width: 250px;      /* Aby fotka nebola obrovská */
+        height: auto;
+        margin-bottom: 20px;   /* Medzera pod fotkou */
+        border-radius: 10px;
+        
+        /* Zachovanie animácie */
+        opacity: 0;
+        animation: slideInLeft 0.5s cubic-bezier(0.20, 1, 0.5, 1) forwards;
+    }
+
+    .intro {
+        /* Reset PC pozicovania */
+        margin: 0; 
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .intro span{
+        color: rgba(235, 64, 52, 1);
+    }
+
+    .intro h1 {
+        font-size: 26px; /* Meno musí byť čitateľné */
+        line-height: 1.3;
+        margin-top: 10px;
+    }
+
+    /* 4. NAVIGÁCIA (Tlačidlá) */
+    nav {
+        /* Zmena z Grid na Flex stĺpec - tlačidlá pod sebou */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        /* Reset PC pozície (margin-left: 43%) */
+        margin: 20px 0 0 0; 
+        gap: 15px; /* Medzery medzi tlačidlami */
+    }
+
+    .buttonPos {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        padding: 15px 0; /* Pevný padding namiesto % */
+        font-size: 18px;
+        
+        /* Zachovanie farieb z PC verzie */
+        background-color: transparent;
+        border: 1px solid rgba(235, 64, 52, 0.70);
+        color: rgba(235, 64, 52, 0.70);
+    }
+
+    /* Aktívny stav tlačidla pre mobil */
+    .button.active {
+        background-color: rgba(235, 64, 52, 0.70); /* Červené pozadie */
+        color: white; /* Biely text */
+        border-color: rgba(235, 64, 52, 1);
+        box-shadow: 0 0 15px rgba(235, 64, 52, 0.4); /* Jemná žiara, aby to vyzeralo sci-fi */
+    }
+
+    /* 5. OBSAH SEKCIE (Tab Content) */
+    .tabContent {
+        margin-left: 0;
+        padding: 20px 0;
+        border-left: none; /* Odstránime ľavú čiaru, zavadzia */
+        /* Pridáme hornú čiaru pre oddelenie od menu */
+        border-top: 1px solid rgba(80, 81, 87, 0.2); 
+        margin-top: 20px;
+    }
+
+    .aboutContent p {
+        margin-left: 0;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .aboutContent h3{
+        color: rgba(235, 64, 52, 1);
+    }
+
+    /* 6. ČASOVÁ OS (Timeline) */
+    .timelineItem {
+        margin-left: 0;
+        padding: 15px;
+        /* Tenšia červená čiara vľavo */
+        border-left: 2px solid rgba(235, 64, 52, 0.5); 
+        margin-bottom: 20px;
+        /* Jemné pozadie pre lepšiu čitateľnosť na mobile */
+        background: linear-gradient(90deg, rgba(235, 64, 52, 0.05) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    .timelineItem h4 {
+        /* Dátum presunieme pod názov */
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+    }
+
+    .timelineItem span.date {
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 14px;
+        color: rgba(235, 64, 52, 1); /* Zvýraznenie dátumu */
+    }
+
+    /* 7. GRIDY (Certifikáty a Kontakty) */
+    .certificateGrid, 
+    .contactGrid {
+        /* Zmena z 3 stĺpcov na 1 stĺpec */
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 20px;
+    }
+
+    .certificateItem {
+        margin-bottom: 0;
+        padding: 20px;
+    }
+
+    /* 8. KONTAKTNÁ STRÁNKA */
+    .contact {
+        margin-left: 0;
+    }
+    
+    .socialsGrid {
+        /* Sociálne siete môžu ostať v 2 stĺpcoch, je to prehľadné */
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
+        gap: 15px;
+    }
+    
+    .socialsItem {
+        margin-right: 0;
+        padding: 20px;
+        border: 1px solid rgba(80, 81, 87, 0.2);
+        border-radius: 10px;
+    }
+
+    /* 9. ÚPRAVA ANIMÁCIÍ PRE MOBIL */
+    /* Zmenšujeme posun z 50% na 20px, aby stránka "nelietala" do strán */
+    @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
     }
 }
-
