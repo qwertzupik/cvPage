@@ -84,7 +84,7 @@ body{
         align-items: center;
         justify-content: center;
 
-        margin-left: 1.3%;
+        margin-left: 3%;
     }
 
     .logo p{
@@ -110,14 +110,26 @@ body{
     .introDiv{
         display: flex;
         flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introDiv img{
+        border-radius: 20px;
+
+        opacity: 0;
+
+        animation: slideInLeft 0.4s cubic-bezier(0.20, 1, 0.5, 1) forwards;
+        will-change: transform, opacity;
     }
 
     .intro{
         color: rgb(80, 81, 87);
         font-size: 23px;
 
-        margin-top: 12%;
-        margin-left: 43%;
+        margin-top: -3%;
+        margin-left: 13%;
 
         animation: slideInLeft 0.4s cubic-bezier(0.20, 1, 0.5, 1) forwards;
         will-change: transform, opacity;
@@ -126,7 +138,7 @@ body{
     nav {
         display: grid;
         grid-template-columns: repeat(3, auto);
-        margin-top: 10%;
+        margin-top: -5%;
         margin-left: 43%;
     }
 
@@ -281,6 +293,8 @@ body{
 
     .contact{
         color: rgba(235, 64, 52, 1);
+
+        margin-left: 1.5%;
 
         opacity: 0;
         
