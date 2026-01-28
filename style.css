@@ -176,6 +176,8 @@ body{
 
     .edu{
         opacity: 0;
+
+        color: white;
         
         animation: slideInRight 0.4s cubic-bezier(0.20, 1, 0.5, 1) forwards;
         will-change: transform, opacity;
@@ -188,6 +190,10 @@ body{
         
         animation: slideInRight 0.4s cubic-bezier(0.20, 1, 0.5, 1) forwards;
         will-change: transform, opacity;
+    }
+    
+    .aboutContenth3{
+        color: rgba(235, 64, 52, 0.70);
     }
 
     .aboutContent p{
@@ -237,6 +243,10 @@ body{
         box-shadow: -35px 0px 20px 0px rgba(235, 64, 52, 0.4);
         transform: translateX(5px);
         transition: all 0.3s ease;
+    }
+
+    .timelineItem h3{
+        color: white;
     }
 
     .timelineItem h4{
@@ -409,9 +419,10 @@ body{
     }
 
     .hyperlink{
-        margin-right: 3%;
+        margin-right: 10%;
         color: rgba(235, 64, 52, 0.70);
         text-decoration: none;
+        white-space: nowrap;
     }
 
     .hyperlink:active{
@@ -419,12 +430,16 @@ body{
     }
 
     .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         margin-left: 0; /* Reset PC okraja */
     }
 
     .logo p {
         font-size: 16px; /* Mierne menšie písmo */
         margin-left: 10px;
+        white-space: nowrap;
     }
 
     /* 3. HERO SEKCIA (Selfie + Text) */
@@ -510,14 +525,18 @@ body{
         margin-top: 20px;
     }
 
+    .edu{
+        color: white;
+    }
+
+    .aboutContenth3{
+        color: rgba(235, 64, 52, 0.70);
+    }
+
     .aboutContent p {
         margin-left: 0;
         text-align: left;
         line-height: 1.6;
-    }
-
-    .aboutContent h3{
-        color: rgba(235, 64, 52, 1);
     }
 
     /* 6. ČASOVÁ OS (Timeline) */
@@ -542,7 +561,7 @@ body{
         margin-left: 0;
         margin-top: 5px;
         font-size: 14px;
-        color: rgba(235, 64, 52, 1); /* Zvýraznenie dátumu */
+        color: rgba(235, 64, 52, 0.70); /* Zvýraznenie dátumu */
     }
 
     /* 7. GRIDY (Certifikáty a Kontakty) */
@@ -556,8 +575,11 @@ body{
     }
 
     .certificateItem {
-        margin-bottom: 0;
-        padding: 20px;
+        margin-bottom: 3%;
+        padding: 10px;
+
+        border: 2px solid rgba(235, 64, 52, 0.70);
+        border-radius: 8px;
     }
 
     /* 8. KONTAKTNÁ STRÁNKA */
