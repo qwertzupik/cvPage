@@ -500,6 +500,7 @@ body{
         width: 100%;
         padding: 15px 0; /* Pevný padding namiesto % */
         font-size: 18px;
+        border-radius: 8px;
         
         /* Zachovanie farieb z PC verzie */
         background-color: transparent;
@@ -523,6 +524,8 @@ body{
         /* Pridáme hornú čiaru pre oddelenie od menu */
         border-top: 1px solid rgba(80, 81, 87, 0.2); 
         margin-top: 20px;
+
+        display: none;
     }
 
     .edu{
