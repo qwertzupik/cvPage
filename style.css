@@ -496,7 +496,6 @@ body{
         color: rgba(235, 64, 52, 0.70);
     }
 
-   
     .button.active {
         background-color: rgba(235, 64, 52, 0.70); 
         color: white; 
@@ -570,18 +569,70 @@ body{
     .contact {
         margin-left: 0;
     }
-    
-    .socialsGrid {
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: 0;
-        gap: 15px;
+
+    .contact h1{
+        color: rgba(235, 64, 52, 1);
+        margin-top: -5%;
     }
-    
-    .socialsItem {
-        margin-right: 0;
-        padding: 20px;
-        border: 1px solid rgba(80, 81, 87, 0.2);
-        border-radius: 10px;
+
+    .contactGrid a{
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid rgba(80, 81, 87, 0.50);
+        border-radius: 8px;
+        max-width: 275px;
+
+        margin-bottom: 5%;
+
+        text-decoration: none;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .contactGrid h3, .contactGrid span{
+        margin-left: 3%;
+        margin-bottom: 3%;
+        
+        color: rgba(255, 255, 255, 1);
+
+    }
+
+    .socialsGrid{
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+
+        margin-left: 3%;
+    }
+
+    .socialsGrid a{
+        display: grid;
+        border-width: 2px;
+        border-color: rgba(80, 81, 87, 0.50);
+
+        justify-items: center;
+
+        margin-top: 5%;
+
+        text-decoration: none;
+    }
+
+    .socialsGrid i{
+        justify-content: center;
+        font-size: 50px;
+        
+    }
+
+    .socialsGrid span{
+        font-size: 10px;
+        color: rgba(80, 81, 87, 0.50);
+    }
+
+    .fa-instagram{
+        color: rgba(235, 64, 52, 0.70);
+    }
+
+    .fa-linkedin{
+        color: #0077B5;
     }
 
     @keyframes slideInRight {
