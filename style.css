@@ -599,9 +599,9 @@ body{
 
     .socialsGrid{
         display: grid;
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: repeat(2, auto);
 
-        margin-left: 3%;
+        max-width: 275px;
     }
 
     .socialsGrid a{
